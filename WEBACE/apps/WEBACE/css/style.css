@@ -11,7 +11,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
  or from the Rappid archive as was distributed by client IO. See the LICENSE file.*/
 
 
-@font-face {
+ @font-face {
     font-family: 'Roboto Condensed';
     src: url('../assets/fonts/Roboto_Condensed/RobotoCondensed-Light.ttf');
     font-weight: 500;
@@ -103,8 +103,8 @@ body {
     height: 130%;
     overflow: hidden;
     box-sizing: border-box;
-    left: 220px;
-    right: 220px;
+    left: 240px;
+    right: 240px;
 }
 
 /*  Inspector  */
@@ -113,7 +113,7 @@ body {
     top: 0;
     right: 0;
     bottom: 120px;/* navigator height */
-    width: 220px;
+    width: 240px;
     box-sizing: border-box;
 }
 .field[data-field$="/fill"],
