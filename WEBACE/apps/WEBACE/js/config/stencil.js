@@ -293,7 +293,7 @@ App.config = App.config || {};
                     'stroke-dasharray': '0'
                 },
                 image: {
-                    'xlink:href': 'assets/GSN-justifications.svg'
+                    'xlink:href': 'assets/GSN-Justifications.svg'
                 },
                 text: {
                     text: 'Statement',
