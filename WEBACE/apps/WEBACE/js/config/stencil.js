@@ -181,7 +181,7 @@ App.config = App.config || {};
         },
         {
             type: 'basic.Image',
-            size: { width: 10, height: 10 },
+            size: { width: 5, height: 5 },
             paperSize: { width: 90, height: 90 },
             allowOrthogonalResize: false,
             attrs: {
