@@ -93,7 +93,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
              { value: 'assets/nsc.svg', icon: 'assets/nsc.svg' },
              { value: 'assets/abstr.svg', icon: 'assets/abstr.svg' },
              { value: 'assets/ascited.svg', icon: 'assets/ascited.svg' },
-             { value: 'assets/ass.svg', icon: 'assets/ass.svg' },
+             { value: 'assets/assumed.svg', icon: 'assets/assumed.svg' },
              { value: 'assets/vec1.svg', icon: 'assets/vec1.svg' },
              { value: 'assets/vec2.svg', icon: 'assets/vec2.svg' },
              { value: 'assets/vec3.svg', icon: 'assets/vec3.svg' },
@@ -114,7 +114,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
              { value: 'assets/GSN-undevelopedgoal.svg', icon:  'assets/GSN-undevelopedgoal.svg' },
              { value: 'assets/GSN-incontextof.svg', content: '<img height="40px" src="assets/GSN-incontextof.svg' },
              { value: 'assets/GSN-assumptions.svg', icon:  'assets/GSN-assumptions.svg' },
-             { value: 'assets/GSN-Justifications.svg', icon:  'assets/GSN-Justifications.svg' },
+             { value: 'assets/GSN-justifications.svg', icon:  'assets/GSN-justifications.svg' },
              { value: 'assets/GSN-undeveloped.svg', icon: 'assets/GSN-undeveloped.svg'}
          ],
  

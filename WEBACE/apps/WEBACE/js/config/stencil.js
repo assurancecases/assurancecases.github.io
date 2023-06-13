@@ -181,7 +181,7 @@ App.config = App.config || {};
         },
         {
             type: 'basic.Image',
-            size: { width: 5, height: 5 },
+            size: { width: 10, height: 10 },
             paperSize: { width: 90, height: 90 },
             allowOrthogonalResize: false,
             attrs: {
@@ -293,7 +293,7 @@ App.config = App.config || {};
                     'stroke-dasharray': '0'
                 },
                 image: {
-                    'xlink:href': 'assets/GSN-Justifications.svg'
+                    'xlink:href': 'assets/GSN-justifications.svg'
                 },
                 text: {
                     text: 'Statement',
@@ -448,7 +448,7 @@ App.config = App.config || {};
                 rx: 2,
                 ry: 2,
                 stroke: '#31d0c6',
-                'stroke-width': 2,
+                'stroke-width': 1,
                 'stroke-dasharray': '0'
             },
             image: {
@@ -460,7 +460,7 @@ App.config = App.config || {};
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
                 refX: '0%',
-                refY: '-55%',
+                refY: '-50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -471,8 +471,8 @@ App.config = App.config || {};
                 fontSize: 12,
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
-                refX: '-30%',
-                refY: '-85%',
+                refX: '-35%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -508,7 +508,7 @@ App.config = App.config || {};
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
                 refX: '0%',
-                refY: '-60%',
+                refY: '-50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -519,8 +519,8 @@ App.config = App.config || {};
                 fontSize: 12,
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
-                refX: '-40%',
-                refY: '-95%',
+                refX: '-35%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -559,7 +559,7 @@ App.config = App.config || {};
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
                 refX: '0%',
-                refY: '-55%',
+                refY: '-50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -570,8 +570,8 @@ App.config = App.config || {};
                 fontSize: 12,
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
-                refX: '-30%',
-                refY: '-85%',
+                refX: '-35%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -607,7 +607,7 @@ App.config = App.config || {};
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
                 refX: '0%',
-                refY: '-55%',
+                refY: '-50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -618,8 +618,8 @@ App.config = App.config || {};
                 fontSize: 12,
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
-                refX: '-30%',
-                refY: '-85%',
+                refX: '-35%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -654,7 +654,7 @@ App.config = App.config || {};
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
                 refX: '0%',
-                refY: '-55%',
+                refY: '-50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -666,7 +666,7 @@ App.config = App.config || {};
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
                 refX: '-35%',
-                refY: '-85%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -700,7 +700,7 @@ App.config = App.config || {};
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
                 refX: '0%',
-                refY: '-55%',
+                refY: '-50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -711,8 +711,8 @@ App.config = App.config || {};
                 fontSize: 12,
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
-                refX: '-37%',
-                refY: '-85%',
+                refX: '-35%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -722,7 +722,7 @@ App.config = App.config || {};
     {
         type: 'basic.Image',
         size: { width: 53, height: 42 },
-        paperSize: { width: 150, height: 75 },
+        paperSize: { width: 140, height: 110 },
         allowOrthogonalResize: false,
         attrs: {
             '.': {
@@ -741,7 +741,7 @@ App.config = App.config || {};
             image: {
                 width: 70,
                 height: 72,
-                'xlink:href': 'assets/ass.svg'
+                'xlink:href': 'assets/assumed.svg'
             },
             text: {
                 text: 'Statement',
@@ -749,7 +749,7 @@ App.config = App.config || {};
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
                 refX: '0%',
-                refY: '-55%',
+                refY: '-50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -761,7 +761,7 @@ App.config = App.config || {};
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
                 refX: '-35%',
-                refY: '-80%',
+                refY: '-90%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -848,8 +848,8 @@ App.config = App.config || {};
                 fill: '#000000',
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-55%',
+                refX: '-5%',
+                refY: '-42%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -860,8 +860,8 @@ App.config = App.config || {};
                 fontSize: 12,
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
-                refX: '-25%',
-                refY: '-90%',
+                refX: '-35%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -898,8 +898,8 @@ App.config = App.config || {};
                 fill: '#000000',
                 fontSize: 12,
                 fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-55%',
+                refX: '-5%',
+                refY: '-42%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
             },
@@ -910,8 +910,8 @@ App.config = App.config || {};
                 fontSize: 12,
                 'font-weight': 'Bold',
                 'text-decoration': 'none',
-                refX: '-25%',
-                refY: '-90%',
+                refX: '-35%',
+                refY: '-93%',
                 yAlignment: 'middle',
                 xAlignment: 'middle'
 
@@ -1277,8 +1277,8 @@ App.config = App.config || {};
     },
     {
         type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
+        size: { width: 10, height: 1 },
+        paperSize: { width: 120, height: 10 },
         allowOrthogonalResize: false,
         attrs: {
             '.': {
