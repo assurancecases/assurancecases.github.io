@@ -134,9 +134,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
          arrowheadSize: [
              { value: 'M 0 0 0 0', content: 'None' },
              { value: 'M199.57 300.05v-4.14h-6.61v-1.1h6.61v-4.83h10.88v10.07h-10.88Z', content: 'Context' },
-             { value: 'M 10 0 L 0 5 L 10 10 z', content: 'InContextOf' },
-             { value : 'none', content: 'SupportedBy', }
-
+             { value: 'M 10 0 L 0 5 L 10 10 z', content: 'Normal' },
             ],
  
          strokeWidth: [
@@ -185,36 +183,36 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                              index: 5
                          },
                      },
-                     '.marker-source': {
-                         d: {
-                             type: 'select-box',
-                             options: options.arrowheadSize,
-                             group: 'marker-source',
-                             label: 'Source arrowhead',
-                             index: 1
-                         },
-                         fill: {
-                             type: 'color-palette',
-                             options: options.colorPalett,
-                             group: 'marker-source',
-                             label: 'Head Types',
-                             index: 1
-                         },
+                    //  '.marker-source': {
+                    //      d: {
+                    //          type: 'select-box',
+                    //          options: options.arrowheadSize,
+                    //          group: 'marker-source',
+                    //          label: 'Source arrowhead',
+                    //          index: 1
+                    //      },
+                    //      fill: {
+                    //          type: 'color-palette',
+                    //          options: options.colorPalett,
+                    //          group: 'marker-source',
+                    //          label: 'Head Types',
+                    //          index: 1
+                    //      },
  
-                     },
+                    //  },
                      '.marker-target': {
                          d: {
                              type: 'select-box',
                              options: options.arrowheadSize,
                              group: 'marker-target',
-                             label: 'target source',
+                             label: 'Arrowhead type',
                              index: 1
                          },
                          fill: {
                              type: 'color-palette',
                              options: options.colorPalett,
                              group: 'marker-target',
-                             label: 'Head Types',
+                             label: 'Arrowhead colour',
                              index: 2
                          },
                      }
@@ -306,7 +304,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                      index: 2
                  },
                  'marker-target': {
-                     label: 'Head Target',
+                     label: 'Arrowhead',
                      index: 3
                  },
                  labels: {
