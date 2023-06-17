@@ -77,8 +77,14 @@ var gdLoad = window.gdLoad;
             var paper = this.paper = new joint.dia.Paper({
                 width: 1000,
                 height: 1000,
-                gridSize: 10,
-                drawGrid: true,
+                gridSize: 20,
+                drawGrid: { name: "mesh"},
+                async: true,
+                // sorting: joint.dia.Paper.sorting.APPROX,
+                clickThreshold: 10,
+                interactive: {
+                    stopDelegation: false
+                },
                 model: graph,
                 //defaultLink: new joint.shapes.app.Link
                 defaultLink: function(cellView, magnet) {
@@ -106,6 +112,7 @@ var gdLoad = window.gdLoad;
 
             this.$('.paper-container').append(paperScroller.el);
             paperScroller.render().center();
+
         },
 
         // Create and populate stencil.
@@ -116,7 +123,7 @@ var gdLoad = window.gdLoad;
                 paper: this.paperScroller,
                 snaplines: this.snaplines,
                 scaleClones: true,
-                width: 220,
+                width: 240,
                 groups: App.config.stencil.groups,
                 dropAnimation: true,
                 groupsToggleButtons: true,
@@ -145,6 +152,7 @@ var gdLoad = window.gdLoad;
             });
             this.$('.stencil-container').append(stencil.el);
             stencil.render().load(App.config.stencil.shapes);
+
         },
 
         initializeKeyboardShortcuts: function() {
@@ -255,6 +263,8 @@ var gdLoad = window.gdLoad;
                 }
 
             }, this);
+
+            
         },
 
         createInspector: function(cell) {
@@ -441,7 +451,9 @@ var gdLoad = window.gdLoad;
             });
 
             this.paperScroller.centerContent();
-        }
+        },
+
+        
     });
 
 })(_, joint);

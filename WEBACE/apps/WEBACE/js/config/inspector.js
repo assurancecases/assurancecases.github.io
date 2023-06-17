@@ -181,14 +181,11 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                              options: options.strokeStyle,
                              group: 'connection',
                              label: 'Link style',
-                             when: { ne: { 'attrs/.connection/stroke': '#222138, none' } },
+                             when: { ne: { 'attrs/.connection/stroke-dasharray': '#222138, none' } },
                              index: 5
                          },
- 
- 
                      },
                      '.marker-source': {
- 
                          d: {
                              type: 'select-box',
                              options: options.arrowheadSize,
@@ -228,11 +225,11 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                      args: {
                          side: {
                              type: 'select-box',
-                             options: options.side,
+                             options: options.router,
                              placeholder: 'Pick a side',
                              group: 'connection',
                              label: 'Anchors side',
-                             when: { eq: { 'router/name': 'oneSide' }, otherwise: { unset: true } },
+                             when: { ne: { 'router/name': 'oneSide' }, otherwise: { unset: true } },
                              index: 2
                          }
                      }

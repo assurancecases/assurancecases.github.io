@@ -21,12 +21,13 @@ App.config = App.config || {};
 
     'use strict';
 
+
     App.config.stencil = {};
 
     App.config.stencil.groups = {
         gsn: { index: 1, label: 'GSN' },
         sacm: { index: 2, label: 'SACM' },
-        other: {index: 3, label: 'Others'}
+        Link: {index: 3, label: 'Links'}
 
     };
 
@@ -369,7 +370,7 @@ App.config = App.config || {};
         },
         {
             type: 'basic.Image',
-            size: { width: 5, height: 5 },
+            size: { width: 1, height: 1 },
             paperSize: { width: 30, height: 30 },
             allowOrthogonalResize: false,
             attrs: {
@@ -1346,6 +1347,12 @@ App.config = App.config || {};
     ];
 
     //Notasi Others
-    
+    App.config.stencil.shapes.Link = [
+
+        {
+            type: 'app.Link',
+            size: { width: 80, height: 60 }
+        },
+    ]
 
 })();
