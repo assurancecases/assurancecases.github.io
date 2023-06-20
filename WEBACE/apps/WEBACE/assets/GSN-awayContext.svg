@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="228.46 209.97 76.04 55.04">
+  <g>
+    <g style="" transform="matrix(1, 0, 0, 1.039405, 0, -10.423141)">
+      <rect x="228.958" y="245.876" width="75.036" height="18.64" style="stroke: rgb(0, 0, 0); fill: none;"/>
+      <g transform="matrix(0.436665, 0, 0, 0.518052, 106.434837, 113.239815)" style="">
+        <rect x="291.624" y="268.148" width="31.442" height="13.408" style="stroke: rgb(0, 0, 0); fill: rgb(215, 215, 215);"/>
+        <rect x="291.624" y="263.496" width="11.706" height="4.652" style="stroke: rgb(0, 0, 0); fill: rgb(215, 215, 215);"/>
+      </g>
+      <path style="stroke: rgb(0, 0, 0); fill: none;" d="M 237.421 212.967 C 228.585 216.1 229.403 223.191 228.958 224.503 L 228.958 245.876 L 303.994 245.876 L 303.994 223.458 C 303.668 222.055 303.964 214.798 295.913 212.522 L 237.421 212.967 Z"/>
+    </g>
+  </g>
+  <path style="fill: rgb(51, 51, 51); white-space: pre;"/>
+</svg>

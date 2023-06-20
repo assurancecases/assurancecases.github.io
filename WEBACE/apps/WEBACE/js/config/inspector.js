@@ -115,7 +115,10 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
              { value: 'assets/GSN-incontextof.svg', content: '<img height="40px" src="assets/GSN-incontextof.svg' },
              { value: 'assets/GSN-assumptions.svg', icon:  'assets/GSN-assumptions.svg' },
              { value: 'assets/GSN-justifications.svg', icon:  'assets/GSN-justifications.svg' },
-             { value: 'assets/GSN-undeveloped.svg', icon: 'assets/GSN-undeveloped.svg'}
+             { value: 'assets/GSN-undeveloped.svg', icon: 'assets/GSN-undeveloped.svg'},
+             { value: 'assets/GSN-awayGoal.svg', icon: 'assets/GSN-awayGoal.svg'},
+             { value: 'assets/GSN-awaySolution.svg', icon: 'assets/GSN-awaySolution.svg'},
+             { value: 'assets/GSN-publicDecorator.svg', icon: 'assets/GSN-publicDecorator.svg'},
          ],
  
          imageLine: [
@@ -134,6 +137,8 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
          arrowheadSize: [
              { value: 'M 0 0 0 0', content: 'None' },
              { value: 'M199.57 300.05v-4.14h-6.61v-1.1h6.61v-4.83h10.88v10.07h-10.88Z', content: 'Context' },
+             { value: 'M 173.008 214.92 L 173.008 210.1 L 90.699 210.1 L 90.669 209.364 L 173.008 209.364 L 173.008 204.85 L 183.888 204.85 L 183.888 214.92 L 173.008 214.92 Z', content: "kotak"},
+             { value: "M 180.756 209.677 L 177.036 215.333 L 173.008 210.1 L 90.699 210.1 L 90.669 209.364 L 173.008 209.364 L 176.938 203.72 L 180.756 209.677 Z", content: "diamond"},
              { value: 'M 10 0 L 0 5 L 10 10 z', content: 'Normal' },
             ],
  
@@ -515,6 +520,32 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
             inputs: {
                 attrs: 
                 {
+                    '.label': {
+                        text: {
+                            type: 'content-editable',
+                            label: 'identifier',
+                            group: 'label',
+                            index: 7
+                        },
+                        fontSize: {
+                            type: 'range',
+                            min: 5,
+                            max: 80,
+                            unit: 'px',
+                            label: 'Font size',
+                            group: 'label',
+                            when: { ne: { 'attrs/.label/text': '' } },
+                            index: 8
+                        },
+                        fill: {
+                            type: 'color-palette',
+                            options: options.colorPalette,
+                            label: 'Fill',
+                            group: 'label',
+                            when: { ne: { 'attrs/.label/text': '' } },
+                            index: 9
+                        }
+                    },
                     '.title': {
                         text: {
                             type: 'content-editable',
@@ -538,7 +569,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                             label: 'Fill',
                             group: 'id',
                             when: { ne: { 'attrs/text/text': '' } },
-                            index: 5
+                            index: 3
                         }
                     },
                     text: {
@@ -546,7 +577,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                             type: 'content-editable',
                             label: 'Description',
                             group: 'desc',
-                            index: 6
+                            index: 4
                         },
                         fontSize: {
                             type: 'range',
@@ -556,7 +587,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                             label: 'Font size',
                             group: 'desc',
                             when: { ne: { 'attrs/text/text': '' } },
-                            index: 7
+                            index: 5
                         },
                         fill: {
                             type: 'color-palette',
@@ -564,28 +595,24 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                             label: 'Fill',
                             group: 'desc',
                             when: { ne: { 'attrs/text1/text1': '' } },
-                            index: 10
+                            index: 6
                         }
-                    },
+                    }
                 }
             },
             groups: {
-                presentation: {
-                    label: 'Presentation',
-                    index: 1
-                },
-                title: {
-                    label: 'Title',
+                label: {
+                    label: 'Modul Identifier',
                     index: 3
                 },
 
                 desc: {
                     label: 'Description',
-                    index: 4
+                    index: 2
                 },
                 id: {
                     label: 'ID',
-                    index: 2
+                    index: 1
                 }
             },
             markup: {

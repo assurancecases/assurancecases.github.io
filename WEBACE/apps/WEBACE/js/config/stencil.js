@@ -25,9 +25,10 @@ App.config = App.config || {};
     App.config.stencil = {};
 
     App.config.stencil.groups = {
-        gsn: { index: 1, label: 'GSN' },
-        sacm: { index: 2, label: 'SACM' },
-        Link: {index: 3, label: 'Links'}
+        gsn: { index: 1, label: 'GSN Core Elements' },
+        gsnExt: { index: 2, label: 'GSN Extensions Elements '},
+        sacm: { index: 3, label: 'SACM' },
+        sacmExt: {index: 4, label: 'SACM Extensions Elements'}
 
     };
 
@@ -56,7 +57,8 @@ App.config = App.config || {};
                     'stroke-dasharray': '0'
                 },
                 image: {
-                    'xlink:href': 'assets/GSN-goals.svg'
+                    'xlink:href': 'assets/GSN-goals.svg',
+                    fill: '#000000'
                 },
                 text: {
                     text: 'Statement',
@@ -392,15 +394,18 @@ App.config = App.config || {};
                 }
             }
         },
-        
+    ];
+
+//GSN extentions
+    App.config.stencil.shapes.gsnExt = [
         {
             type: 'basic.Image',
-            size: { width: 10, height: 5 },
-            paperSize: { width: 80, height: 10 },
+            size: { width: 45, height: 35 },
+            paperSize: { width: 150, height: 110 },
             allowOrthogonalResize: false,
             attrs: {
                 '.': {
-                    'data-tooltip': 'InContextOf',
+                    'data-tooltip': 'Away Goal',
                     'data-tooltip-position': 'left',
                     'data-tooltip-position-selector': '.joint-stencil'
                 },
@@ -413,10 +418,215 @@ App.config = App.config || {};
                     'stroke-dasharray': '0'
                 },
                 image: {
-                    'xlink:href': 'assets/GSN-incontextof.svg'
+                    'xlink:href': 'assets/GSN-awayGoal.svg'
                 },
                 text: {
-                    text: '',
+                    text: 'Statement',
+                    fill: '#000000',
+                    fontSize: 12,
+                    fontFamily: 'Arial, helvetica, sans-serif',
+                    refX: '0%',
+                    refY: '-60%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                },
+                '.label': {
+                    text: 'Identifier',
+                    fill: '#000000',
+                    fontSize: 12,
+                    'font-family': 'Roboto Condensed',
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-90%',
+                    refY: '-20%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                    },
+                '.title': {
+                    text: 'ID',
+                    fill: '#000000',
+                    'font-family': 'Roboto Condensed',
+                    fontSize: 12,
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-35%',
+                    refY: '-93%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+    
+                },
+            }
+        },
+        {
+            type: 'basic.Image',
+            size: { width: 45, height: 35 },
+            paperSize: { width: 140, height: 120 },
+            allowOrthogonalResize: false,
+            attrs: {
+                '.': {
+                    'data-tooltip': 'Away Solution',
+                    'data-tooltip-position': 'left',
+                    'data-tooltip-position-selector': '.joint-stencil'
+                },
+                '.body': {
+                    fill: 'transparent',
+                    rx: 2,
+                    ry: 2,
+                    stroke: '#31d0c6',
+                    'stroke-width': 1,
+                    'stroke-dasharray': '0'
+                },
+                image: {
+                    'xlink:href': 'assets/GSN-awaySolution.svg'
+                },
+                text: {
+                    text: 'Statement',
+                    fill: '#000000',
+                    fontSize: 12,
+                    fontFamily: 'Arial, helvetica, sans-serif',
+                    refX: '0%',
+                    refY: '-60%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                },
+                '.label': {
+                    text: 'Identifier',
+                    fill: '#000000',
+                    fontSize: 12,
+                    'font-family': 'Roboto Condensed',
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-90%',
+                    refY: '-20%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                    },
+                '.title': {
+                    text: 'ID',
+                    fill: '#000000',
+                    'font-family': 'Roboto Condensed',
+                    fontSize: 12,
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-35%',
+                    refY: '-93%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+    
+                },
+            }
+        },
+        {
+            type: 'basic.Image',
+            size: { width: 45, height: 35 },
+            paperSize: { width: 140, height: 120 },
+            allowOrthogonalResize: false,
+            attrs: {
+                '.': {
+                    'data-tooltip': 'Away Context',
+                    'data-tooltip-position': 'left',
+                    'data-tooltip-position-selector': '.joint-stencil'
+                },
+                '.body': {
+                    fill: 'transparent',
+                    rx: 2,
+                    ry: 2,
+                    stroke: '#31d0c6',
+                    'stroke-width': 1,
+                    'stroke-dasharray': '0'
+                },
+                image: {
+                    'xlink:href': 'assets/GSN-awayContext.svg'
+                },
+                text: {
+                    text: 'Statement',
+                    fill: '#000000',
+                    fontSize: 12,
+                    fontFamily: 'Arial, helvetica, sans-serif',
+                    refX: '0%',
+                    refY: '-60%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                },
+                '.label': {
+                    text: 'Identifier',
+                    fill: '#000000',
+                    fontSize: 12,
+                    'font-family': 'Roboto Condensed',
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-90%',
+                    refY: '-20%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                    },
+                '.title': {
+                    text: 'ID',
+                    fill: '#000000',
+                    'font-family': 'Roboto Condensed',
+                    fontSize: 12,
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-35%',
+                    refY: '-93%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+    
+                },
+            }
+        },
+        {
+            type: 'basic.Image',
+            size: { width: 15, height: 15 },
+            paperSize: { width: 25, height: 20 },
+            allowOrthogonalResize: false,
+            attrs: {
+                '.': {
+                    'data-tooltip': 'Public Decorator',
+                    'data-tooltip-position': 'left',
+                    'data-tooltip-position-selector': '.joint-stencil'
+                },
+                '.body': {
+                    fill: 'transparent',
+                    rx: 2,
+                    ry: 2,
+                    stroke: '#31d0c6',
+                    'stroke-width': 1,
+                    'stroke-dasharray': '0'
+                },
+                image: {
+                    'xlink:href': 'assets/GSN-publicDecorator.svg'
+                },
+            }
+        },
+    ]
+
+//Notasi SACM
+    App.config.stencil.shapes.sacm = [
+        {
+            type: 'basic.Image',
+            size: { width: 45, height: 35 },
+            paperSize: { width: 150, height: 75 },
+            allowOrthogonalResize: false,
+            attrs: {
+                '.': {
+                    'data-tooltip': 'Claim',
+                    'data-tooltip-position': 'left',
+                    'data-tooltip-position-selector': '.joint-stencil'
+                },
+                '.body': {
+                    fill: 'transparent',
+                    rx: 2,
+                    ry: 2,
+                    stroke: '#31d0c6',
+                    'stroke-width': 1,
+                    'stroke-dasharray': '0'
+                },
+                image: {
+                    'xlink:href': 'assets/s1.svg'
+                },
+                text: {
+                    text: 'Statement',
                     fill: '#000000',
                     fontSize: 12,
                     fontFamily: 'Arial, helvetica, sans-serif',
@@ -425,62 +635,126 @@ App.config = App.config || {};
                     yAlignment: 'middle',
                     xAlignment: 'middle'
                 },
+                '.title': {
+                    text: 'ID',
+                    fill: '#000000',
+                    'font-family': 'Roboto Condensed',
+                    fontSize: 12,
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-35%',
+                    refY: '-93%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+    
+                },
             }
         },
-    ];
+        {
+            type: 'basic.Image',
+            size: { width: 53, height: 42 },
+            paperSize: { width: 150, height: 75 },
+            allowOrthogonalResize: false,
+            attrs: {
+                '.': {
+                    'data-tooltip': 'Argument Reasoning',
+                    'data-tooltip-position': 'left',
+                    'data-tooltip-position-selector': '.joint-stencil'
+                },
+                '.body': {
+                    fill: 'transparent',
+                    rx: 2,
+                    ry: 2,
+                    stroke: '#31d0c6',
+                    'stroke-width': 2,
+                    'stroke-dasharray': '0'
+                },
+                image: {
+                    width: 70,
+                    height: 72,
+                    'xlink:href': 'assets/vec1.svg'
+                },
+                text: {
+                    text: 'Statement',
+                    fill: '#000000',
+                    fontSize: 12,
+                    fontFamily: 'Arial, helvetica, sans-serif',
+                    refX: '35%',
+                    refY: '-50%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                },
+                '.title': {
+                    text: 'ID',
+                    fill: '#000000',
+                    'font-family': 'Roboto Condensed',
+                    fontSize: 12,
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '7%',
+                    refY: '-85%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+    
+    
+                }
+            }
+        },
+        {
+            type: 'basic.Image',
+            size: { width: 53, height: 42 },
+            paperSize: { width: 120, height: 130 },
+            allowOrthogonalResize: false,
+            attrs: {
+                '.': {
+                    'data-tooltip': 'Artifact Reference',
+                    'data-tooltip-position': 'left',
+                    'data-tooltip-position-selector': '.joint-stencil'
+                },
+                '.body': {
+                    fill: 'transparent',
+                    rx: 2,
+                    ry: 2,
+                    stroke: '#31d0c6',
+                    'stroke-width': 2,
+                    'stroke-dasharray': '0'
+                },
+                image: {
+                    width: 70,
+                    height: 72,
+                    'xlink:href': 'assets/SACM-artifactReference.svg'
+                },
+                text: {
+                    text: 'Statement',
+                    fill: '#000000',
+                    fontSize: 12,
+                    fontFamily: 'Arial, helvetica, sans-serif',
+                    refX: '-5%',
+                    refY: '-42%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+                },
+                '.title': {
+                    text: 'ID',
+                    fill: '#000000',
+                    'font-family': 'Roboto Condensed',
+                    fontSize: 12,
+                    'font-weight': 'Bold',
+                    'text-decoration': 'none',
+                    refX: '-35%',
+                    refY: '-93%',
+                    yAlignment: 'middle',
+                    xAlignment: 'middle'
+    
+    
+                }
+            }
+        },
 
-
-//notasi SACM 
-    App.config.stencil.shapes.sacm = [
+    ]
+//notasi SACM Extension
+    App.config.stencil.shapes.sacmExt = [
         
-    {
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Claim',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/s1.svg'
-            },
-            text: {
-                text: 'Statement',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-            '.title': {
-                text: 'ID',
-                fill: '#000000',
-                'font-family': 'Roboto Condensed',
-                fontSize: 12,
-                'font-weight': 'Bold',
-                'text-decoration': 'none',
-                refX: '-35%',
-                refY: '-93%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-
-            },
-        }
-    },
-
         {
         type: 'basic.Image',
         size: { width: 45, height: 35 },
@@ -770,106 +1044,8 @@ App.config = App.config || {};
             }
         }
     },
-    {
-        type: 'basic.Image',
-        size: { width: 53, height: 42 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Argument Reasoning',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 2,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                width: 70,
-                height: 72,
-                'xlink:href': 'assets/vec1.svg'
-            },
-            text: {
-                text: 'Statement',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '35%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-            '.title': {
-                text: 'ID',
-                fill: '#000000',
-                'font-family': 'Roboto Condensed',
-                fontSize: 12,
-                'font-weight': 'Bold',
-                'text-decoration': 'none',
-                refX: '7%',
-                refY: '-85%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-
-
-            }
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 53, height: 42 },
-        paperSize: { width: 120, height: 130 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Artifact Reference',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 2,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                width: 70,
-                height: 72,
-                'xlink:href': 'assets/SACM-artifactReference.svg'
-            },
-            text: {
-                text: 'Statement',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '-5%',
-                refY: '-42%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-            '.title': {
-                text: 'ID',
-                fill: '#000000',
-                'font-family': 'Roboto Condensed',
-                fontSize: 12,
-                'font-weight': 'Bold',
-                'text-decoration': 'none',
-                refX: '-35%',
-                refY: '-93%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-
-
-            }
-        }
-    },
+ 
+ 
     {
         type: 'basic.Image',
         size: { width: 53, height: 42 },
@@ -1070,289 +1246,280 @@ App.config = App.config || {};
             }
         }
     },
-    {
+    // {
 
 
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Rectangle with ports',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/line1.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-60%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Rectangle with ports',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/line2.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Rectangle with ports',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/line3.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Rectangle with ports',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/line4.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Rectangle with ports',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/line5.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '-5%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Rectangle with ports',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/line6.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 10, height: 1 },
-        paperSize: { width: 120, height: 10 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Asserted Context',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/sacm-assertedContext.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
-    {
-        type: 'basic.Image',
-        size: { width: 45, height: 35 },
-        paperSize: { width: 150, height: 75 },
-        allowOrthogonalResize: false,
-        attrs: {
-            '.': {
-                'data-tooltip': 'Rectangle with ports',
-                'data-tooltip-position': 'left',
-                'data-tooltip-position-selector': '.joint-stencil'
-            },
-            '.body': {
-                fill: 'transparent',
-                rx: 2,
-                ry: 2,
-                stroke: '#31d0c6',
-                'stroke-width': 1,
-                'stroke-dasharray': '0'
-            },
-            image: {
-                'xlink:href': 'assets/line7.svg'
-            },
-            text: {
-                text: '',
-                fill: '#000000',
-                fontSize: 12,
-                fontFamily: 'Arial, helvetica, sans-serif',
-                refX: '0%',
-                refY: '-50%',
-                yAlignment: 'middle',
-                xAlignment: 'middle'
-            },
-        }
-    },
+    //     type: 'basic.Image',
+    //     size: { width: 45, height: 35 },
+    //     paperSize: { width: 150, height: 75 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Rectangle with ports',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/line1.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '0%',
+    //             refY: '-60%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
+    // {
+    //     type: 'basic.Image',
+    //     size: { width: 45, height: 35 },
+    //     paperSize: { width: 150, height: 75 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Rectangle with ports',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/line2.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '0%',
+    //             refY: '-50%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
+    // {
+    //     type: 'basic.Image',
+    //     size: { width: 45, height: 35 },
+    //     paperSize: { width: 150, height: 75 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Rectangle with ports',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/line3.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '0%',
+    //             refY: '-50%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
+    // {
+    //     type: 'basic.Image',
+    //     size: { width: 45, height: 35 },
+    //     paperSize: { width: 150, height: 75 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Rectangle with ports',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/line4.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '0%',
+    //             refY: '-50%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
+    // {
+    //     type: 'basic.Image',
+    //     size: { width: 45, height: 35 },
+    //     paperSize: { width: 150, height: 75 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Rectangle with ports',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/line5.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '-5%',
+    //             refY: '-50%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
+    // {
+    //     type: 'basic.Image',
+    //     size: { width: 45, height: 35 },
+    //     paperSize: { width: 150, height: 75 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Rectangle with ports',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/line6.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '0%',
+    //             refY: '-50%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
+    // {
+    //     type: 'basic.Image',
+    //     size: { width: 10, height: 1 },
+    //     paperSize: { width: 120, height: 10 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Asserted Context',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/sacm-assertedContext.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '0%',
+    //             refY: '-50%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
+    // {
+    //     type: 'basic.Image',
+    //     size: { width: 45, height: 35 },
+    //     paperSize: { width: 150, height: 75 },
+    //     allowOrthogonalResize: false,
+    //     attrs: {
+    //         '.': {
+    //             'data-tooltip': 'Rectangle with ports',
+    //             'data-tooltip-position': 'left',
+    //             'data-tooltip-position-selector': '.joint-stencil'
+    //         },
+    //         '.body': {
+    //             fill: 'transparent',
+    //             rx: 2,
+    //             ry: 2,
+    //             stroke: '#31d0c6',
+    //             'stroke-width': 1,
+    //             'stroke-dasharray': '0'
+    //         },
+    //         image: {
+    //             'xlink:href': 'assets/line7.svg'
+    //         },
+    //         text: {
+    //             text: '',
+    //             fill: '#000000',
+    //             fontSize: 12,
+    //             fontFamily: 'Arial, helvetica, sans-serif',
+    //             refX: '0%',
+    //             refY: '-50%',
+    //             yAlignment: 'middle',
+    //             xAlignment: 'middle'
+    //         },
+    //     }
+    // },
     ];
-
-    //Notasi Others
-    App.config.stencil.shapes.Link = [
-
-        {
-            type: 'app.Link',
-            size: { width: 80, height: 60 }
-        },
-    ]
 
 })();

@@ -153,6 +153,41 @@ var gdLoad = window.gdLoad;
             this.$('.stencil-container').append(stencil.el);
             stencil.render().load(App.config.stencil.shapes);
 
+            $(function() {
+                // Initialize the dialog
+                $("#dialog").dialog({
+                  autoOpen: false, // Dialog will not open automatically
+                  modal: true, // Dialog will be displayed as a modal
+                  buttons: {
+                    "Submit": function() {
+                      // Get the user's input from the input field
+                      var userInput = $("#inputText").val();
+                      
+                      // Perform any necessary actions with the user's input
+                      // For example, update the dropped element with the userInput
+                      
+                      // Close the dialog box
+                      $(this).dialog("close");
+                    },
+                    "Cancel": function() {
+                      // Close the dialog box without taking any action
+                      $(this).dialog("close");
+                    }
+                  }
+                });
+              
+                // Event listener for the drop event on the paper
+                // Open the dialog when the drop event occurs
+                paper.on("cell:pointerup", function(cellView) {
+                  // Check if the dropped element is the specific element you want to trigger the dialog
+                  // You can use cellView.model to access the dropped element's model or attributes
+                  if (cellView.model.get("type") === "basic.Image") {
+                    $("#dialog").dialog("open");
+                  }
+                });
+              });
+              
+
         },
 
         initializeKeyboardShortcuts: function() {
@@ -455,5 +490,6 @@ var gdLoad = window.gdLoad;
 
         
     });
+    
 
 })(_, joint);
