@@ -170,7 +170,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                 '.connection': {
                     stroke: '#222138',
                     'stroke-dasharray': '0',
-                    'stroke-width': 1
+                    'stroke-width': 2
                 }
             }
         },
