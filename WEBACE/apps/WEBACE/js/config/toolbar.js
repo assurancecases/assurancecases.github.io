@@ -224,7 +224,7 @@ App.config = App.config || {};
                 type: 'button',
                 name: 'help',
                 group:'help',
-                text: 'Assurance cases rules',
+                text: 'Assurance cases examples',
                 icon: 'help',
                 attrs: {
                     button: {
