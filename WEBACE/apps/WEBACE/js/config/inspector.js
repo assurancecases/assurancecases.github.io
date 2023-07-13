@@ -224,21 +224,7 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
                          },
                      }
                  },
- 
-                 router: {
- 
-                     args: {
-                         side: {
-                             type: 'select-box',
-                             options: options.router,
-                             placeholder: 'Pick a side',
-                             group: 'connection',
-                             label: 'Anchors side',
-                             when: { ne: { 'router/name': 'oneSide' }, otherwise: { unset: true } },
-                             index: 2
-                         }
-                     }
-                 },
+              
                  connector: {
                     name:{ 
                         type: 'select-button-group',
