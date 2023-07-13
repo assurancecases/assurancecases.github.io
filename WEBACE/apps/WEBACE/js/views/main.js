@@ -260,7 +260,7 @@ var gdLoad = window.gdLoad;
             }, this);
         },
 
-        initializeSelection: function() {
+       initializeSelection: function() {
 
             this.clipboard = new joint.ui.Clipboard();
             this.selection = new joint.ui.Selection({
@@ -268,18 +268,9 @@ var gdLoad = window.gdLoad;
                 handles: App.config.selection.handles
             });
 
-            // Initiate selecting when the user grabs the blank area of the paper while the Shift key is pressed.
+            // Initiate selecting when the user grabs the blank area of the paper.
             // Otherwise, initiate paper pan.
-            this.paper.on('blank:pointerdown', function(evt, x, y) {
-
-                if (this.keyboard.isActive('shift', evt)) {
-                    this.selection.startSelecting(evt);
-                } else {
-                    this.selection.cancelSelection();
-                    this.paperScroller.startPanning(evt, x, y);
-                }
-
-            }, this);
+            this.paper.on('blank:pointerdown', this.selection.startSelecting);
 
             this.paper.on('element:pointerdown', function(elementView, evt) {
 
