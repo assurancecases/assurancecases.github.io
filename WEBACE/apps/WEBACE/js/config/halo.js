@@ -75,19 +75,19 @@ App.config = App.config || {};
                     }
                 }
             },
-            {
-                name: 'unlink',
-                position: 'w',
-                events: { pointerdown: 'unlinkElement' },
-                attrs: {
-                    '.handle': {
-                        'data-tooltip-class-name': 'small',
-                        'data-tooltip': 'Click to break all connections to other objects',
-                        'data-tooltip-position': 'right',
-                        'data-tooltip-padding': 15
-                    }
-                }
-            },
+            // {
+            //     name: 'unlink',
+            //     position: 'w',
+            //     events: { pointerdown: 'unlinkElement' },
+            //     attrs: {
+            //         '.handle': {
+            //             'data-tooltip-class-name': 'small',
+            //             'data-tooltip': 'Click to break all connections to other objects',
+            //             'data-tooltip-position': 'right',
+            //             'data-tooltip-padding': 15
+            //         }
+            //     }
+            // },
             {
                 name: 'link',
                 position: 'e',
