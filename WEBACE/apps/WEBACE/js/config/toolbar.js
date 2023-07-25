@@ -228,7 +228,7 @@ App.config = App.config || {};
                 icon: 'help',
                 attrs: {
                     button: {
-                        'data-tooltip': 'Assurance cases rules',
+                        'data-tooltip': 'Help & Documentations',
                         'data-tooltip-position': 'top',
                         'data-tooltip-position-selector': '.toolbar-container',
                         onclick: "window.open('https://nisas-organization.gitbook.io/assurance-cases-rules/', '_blank')"
