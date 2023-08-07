@@ -47,20 +47,6 @@ App.config = App.config || {};
                     }
                 }
             },
-            // {
-                
-            // name: 'myaction', 
-            // position: 'ne',
-            // icon: 'assets/tip-icon.png',
-            // attrs: {
-            //     '.handle': {
-            //         'data-tooltip-class-name': 'small',
-            //         'data-tooltip': 'Click for some tip!',
-            //         'data-tooltip-position': 'left',
-            //         'data-tooltip-padding': 15
-            //     }
-            // }
-            // },
  
             {
                 name: 'clone',
@@ -91,12 +77,50 @@ App.config = App.config || {};
             {
                 name: 'link',
                 position: 'e',
+                icon: 'assets/kanan.png',
                 events: { pointerdown: 'startLinking', pointermove: 'doLink', pointerup: 'stopLinking' },
                 attrs: {
                     '.handle': {
-                        'data-tooltip-class-name': 'small',
                         'data-tooltip': 'Click and drag to connect the object',
                         'data-tooltip-position': 'left',
+                        'data-tooltip-padding': 15
+                    }
+                }
+            },
+            {
+                name: 'link-north',
+                position: 'n',
+                events: { pointerdown: 'startLinking', pointermove: 'doLink', pointerup: 'stopLinking' },
+                attrs: {
+                    '.handle': {
+                        'data-tooltip': 'Click and drag to connect the object',
+                        'data-tooltip-position': 'left',
+                        'data-tooltip-padding': 15
+                    }
+                }
+            },
+            {
+                name: 'link-west',
+                position: 'w',
+                icon: 'assets/kiri.png',
+                events: { pointerdown: 'startLinking', pointermove: 'doLink', pointerup: 'stopLinking' },
+                attrs: {
+                    '.handle': {
+                        'data-tooltip': 'Click and drag to connect the object',
+                        'data-tooltip-position': 'left',
+                        'data-tooltip-padding': 15
+                    }
+                }
+            },
+            {
+                name: 'link-south',  // Add a new handle for south ('s') position
+                position: 's',       // Position it at the south
+                icon: 'assets/bawah.png',
+                events: { pointerdown: 'startLinking', pointermove: 'doLink', pointerup: 'stopLinking' },
+                attrs: {
+                    '.handle': {
+                        'data-tooltip': 'Click and drag to connect the object',
+                        'data-tooltip-position': 'top',   // Position the tooltip on top of the handle
                         'data-tooltip-padding': 15
                     }
                 }
@@ -115,6 +139,7 @@ App.config = App.config || {};
                 }
             }
         ]
+        
     };
 
 })();
