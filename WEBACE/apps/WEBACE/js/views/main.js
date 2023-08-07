@@ -85,6 +85,7 @@ var gdLoad = window.gdLoad;
                 interactive: {
                     stopDelegation: false
                 },
+                linkPinning: false,
                 model: graph,
                 //defaultLink: new joint.shapes.app.Link
                 defaultLink: function(cellView, magnet) {
